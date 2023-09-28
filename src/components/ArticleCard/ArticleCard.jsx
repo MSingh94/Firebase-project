@@ -9,7 +9,7 @@ function ArticleCard({article}) {
         <img src={article?.imageUrl}/>
         <div className="article-card-info">
             <p>{article.title}</p>
-            <p></p>
+            <Link to={`/article/${article?.id}`}>Read</Link>
             </div>        
         </div>
   )

@@ -22,6 +22,9 @@ const Header = () => {
   return (
     <div className='header-container'>
       <FaHome style={{cursor:"pointer"}} onClick={() => navigate('/')}/>
+      {
+        user && <Link to="/addarticle" className='auth-link'>Add Article</Link>
+      }
       <div className="categories-container">
         {
             categories.map(item => <Link className='nav-link' to={`/category/${item}`} key={item}>{item}</Link>)
